@@ -1,6 +1,7 @@
 kkolk.mssql
 =========
-
+Description
+-----------
 This ansible role will install a SQL Server Developer Edition 2017 instance on supported Windows platforms.  This role can be adjusted to install any supported SQL server installation.  I've used variants of it to install SQL Server 2012/2014. 
 
 This role also handles local firewall changes as required and demonstrates how to make configuration adjustments to the SQL instance.
