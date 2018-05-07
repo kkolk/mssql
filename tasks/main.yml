@@ -66,11 +66,11 @@
     user_cannot_change_password: yes
     description: "SQL Service account for {{ inventory_hostname }}\\{{ mssql_instance_name }}"
     state: present
-    path: "cn=Users,dc=CONTOSO,dc=com"
+    path: "{{ mssql_base_ldap_path }}"
     groups:
       - Domain Users
   tags: service_account
-  delegate_to: dc01
+  delegate_to: "{{ domain_controller }}"
 
 - name: Active Directory | Ensure SQL Agent Service account is present
   win_domain_user:
@@ -82,10 +82,10 @@
     user_cannot_change_password: yes
     description: "SQL Agent service account for {{ inventory_hostname }}\\{{ mssql_instance_name }}"
     state: present
-    path: "cn=Users,dc=CONTOSO,dc=com"
+    path: "{{ mssql_base_ldap_path }}"
     groups:
       - Domain Users
-  delegate_to: dc01
+  delegate_to: "{{ domain_controller }}"
   tags: service_account
 
 # SQL install may fail if a pending reboot is detected

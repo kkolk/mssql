@@ -6,6 +6,8 @@ This ansible role will install a SQL Server Developer Edition 2017 instance on s
 
 This role also handles local firewall changes as required and demonstrates how to make configuration adjustments to the SQL instance.
 
+Using default values it's designed to work as an role that can be added to the member server in the windows test environment I've laid out through a series of posts on http://frostbyte.us/configure-an-ansible-testing-system-on-windows-part-1/ 
+
 Requirements
 ------------
 
