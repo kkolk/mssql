@@ -201,14 +201,14 @@ mssql_min_server_memory: 0
 
 Example Playbook
 ----------------
-
+```yaml
 - name: SQL Server
   hosts: sql_server
   tags: mssql
 
   roles:
   - { role: kkolk.mssql }
-
+```
 License
 -------
 
