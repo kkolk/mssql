@@ -101,6 +101,11 @@
 
 - meta: flush_handlers
 
+- name: Create download path
+  win_file:
+    path: "{{ mssql_temp_download_path }}"
+    state: directory
+
 - name: Fetch SQL Media Downloader
   win_get_url:
     url: "{{ mssql_installation_source }}"
